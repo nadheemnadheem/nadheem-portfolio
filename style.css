@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.92);
+    border-bottom: 1px solid #222;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #aaaaaa;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 80px;
+
+    background:
+        radial-gradient(circle at center, #222 0%, #080808 55%);
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    font-size: 14px;
+    letter-spacing: 6px;
+    color: #aaaaaa;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(70px, 13vw, 160px);
+    line-height: 0.9;
+    letter-spacing: 12px;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: auto;
+    color: #aaaaaa;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.btn.secondary {
+    border-color: #555;
+    color: #bbbbbb;
+}
+
+
+/* Common Section */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 30px;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #777777;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 48px;
+}
+
+
+/* About */
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-text h3 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #aaaaaa;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
+/* Skills */
+
+.skills-section {
+    max-width: 100%;
+    background: #0d0d0d;
+}
+
+.skills-section .section-title,
+.skills-grid {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    border: 1px solid #252525;
+    padding: 30px;
+    min-height: 180px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #777;
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #999999;
+}
+
+
+/* Projects */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    border: 1px solid #252525;
+    padding: 35px;
+    min-height: 270px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    border-color: #777;
+    transform: translateY(-5px);
+}
+
+.project-card span {
+    color: #666666;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.project-card h3 {
+    font-size: 26px;
+    margin: 25px 0 15px;
+}
+
+.project-card p {
+    color: #999999;
+}
+
+.project-tools {
+    margin-top: 25px;
+    color: #dddddd;
+    font-size: 13px;
+}
+
+
+/* Experience */
+
+.experience-section {
+    background: #0d0d0d;
+    max-width: 100%;
+    padding-left: calc((100% - 1140px) / 2);
+    padding-right: calc((100% - 1140px) / 2);
+}
+
+.experience-card {
+    max-width: 900px;
+    border-left: 2px solid #555;
+    padding: 10px 0 30px 30px;
+    margin-bottom: 30px;
+}
+
+.experience-card h3 {
+    font-size: 25px;
+}
+
+.experience-card h4 {
+    margin-top: 5px;
+    color: #aaaaaa;
+}
+
+.experience-card .date {
+    color: #666666;
+    margin: 10px 0;
+}
+
+.experience-card p {
+    color: #999999;
+}
+
+
+/* Education */
+
+.education-card {
+    border: 1px solid #252525;
+    padding: 35px;
+    max-width: 850px;
+}
+
+.education-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    color: #999999;
+}
+
+.education-card span {
+    display: inline-block;
+    margin-top: 15px;
+    color: #dddddd;
+}
+
+
+/* Contact */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-content > p {
+    color: #999999;
+    font-size: 18px;
+}
+
+.contact-links {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+.contact-links a:hover {
+    border-color: #ffffff;
+}
+
+
+/* Footer */
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px;
+    text-align: center;
+    color: #666666;
+    font-size: 13px;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+        letter-spacing: 5px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 38px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+}
